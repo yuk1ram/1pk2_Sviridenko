@@ -4,26 +4,26 @@ public class MathCalculations
 { 
     public static void Main(string[] args)
     {
-        // Задача 1
+        // первая задача 
         double a1 = 0;
         double b1 = -6;
         double c1 = -2;
         double result1 = CalculateExpression1(a1, b1, c1);
         Console.WriteLine($"Результат выражения 1: {result1}");
 
-        // Задача 2
+        // вторая задача
         double a2 = 8;
         double b2 = 14;
         double c2 = Math.PI / 4;
         double result2 = CalculateExpression2(a2, b2, c2);
         Console.WriteLine($"Результат выражения 2: {result2}");
 
-        //Задача 3
+        // третья задача
         EmulateRegistration();
     }
 
 
-    // Метод для вычисления выражения 1
+    // метод для вычисления первого выражения
     public static double CalculateExpression1(double a, double b, double c)
     {
         double arctgA = Math.Atan(a);
@@ -36,7 +36,7 @@ public class MathCalculations
     }
 
 
-    // Метод для вычисления выражения 2
+    // метод для вычисления второго выражения
     public static double CalculateExpression2(double a, double b, double c)
     {
         double sqrtB = Math.Sqrt(b);
@@ -57,7 +57,7 @@ public class MathCalculations
         return numerator / denominator;
     }
 
-    // Метод для эмуляции регистрации
+    // метод для эмуляции регистрации
     public static void EmulateRegistration()
     {
         Console.WriteLine("Выберите действие:");

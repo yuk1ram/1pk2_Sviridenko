@@ -17,36 +17,36 @@ public class AgeChecker
         Console.Write("День: ");
         int birthDay = int.Parse(Console.ReadLine());
 
-        // Получаем текущую дату
+        // получение текущей даты
         DateTime today = DateTime.Today;
         int currentYear = today.Year;
         int currentMonth = today.Month;
         int currentDay = today.Day;
 
-        // Расчет возраста
+        // расчёт возраста
         int age = currentYear - birthYear;
 
         if (birthMonth < currentMonth)
         {
-            // Возраст точный
+            // возраст точный
         }
         else if (birthMonth == currentMonth)
         {
             if (birthDay <= currentDay)
             {
-                // Возраст точный
+                // возраст точный
             }
             else
             {
-                age--; // Еще не было дня рождения в этом году
+                age--; // ещё не было дня рождения в этом году
             }
         }
         else
         {
-            age--; // Еще не было дня рождения в этом году
+            age--; // ещё не было дня рождения в этом году
         }
 
-        // Проверка совершеннолетия и вывод результата
+        // проверка совершеннолетия и вывод результата
         if (age >= 18)
         {
             Console.WriteLine("Вы совершеннолетний");

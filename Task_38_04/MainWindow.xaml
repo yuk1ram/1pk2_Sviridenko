@@ -1,0 +1,51 @@
+﻿<Window x:Class="StudentRegistrationApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentRegistrationApp"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="Регистрация студентов" 
+        Height="900" 
+        Width="500"
+        Closing="Window_Closing">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="0,0,10,0">
+            <Label Content="Фамилия:"/>
+            <TextBox x:Name="lastNameTextBox" Margin="0,0,0,10"/>
+
+            <Label Content="Имя:"/>
+            <TextBox x:Name="firstNameTextBox" Margin="0,0,0,10"/>
+
+            <Label Content="Отчество:"/>
+            <TextBox x:Name="middleNameTextBox" Margin="0,0,0,10"/>
+
+            <Label Content="Группа:"/>
+            <TextBox x:Name="groupTextBox" Margin="0,0,0,10"/>
+
+            <Label Content="Пол:"/>
+            <ComboBox x:Name="genderComboBox" Margin="0,0,0,10" SelectedIndex="0">
+                <ComboBoxItem Content="Мужской"/>
+                <ComboBoxItem Content="Женский"/>
+                <ComboBoxItem Content="Другой"/>
+            </ComboBox>
+
+            <Label Content="Дата рождения:"/>
+            <DatePicker x:Name="birthDatePicker" Margin="0,0,0,20" SelectedDate="{x:Static sys:DateTime.Now}"/>
+
+            <Button x:Name="saveButton" Content="Сохранить" Click="SaveButton_Click" 
+                    Height="40" FontSize="16" FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <Label Content="Список студентов:" FontWeight="Bold" FontSize="16"/>
+            <ListBox x:Name="studentsListBox" Height="400"/>
+        </StackPanel>
+    </Grid>
+</Window>
